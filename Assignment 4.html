@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Form - Land of Boxes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            padding: 8px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        input[type="text"], input[type="email"], input[type="tel"], select {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h2>Order Form - Land of Boxes</h2>
+    <form action="#" method="post">
+        <h3>Contact Details</h3>
+        <table>
+            <tr>
+                <th>Name:</th>
+                <td><input type="text" name="name" required></td>
+            </tr>
+            <tr>
+                <th>Address:</th>
+                <td><input type="text" name="address" required></td>
+            </tr>
+            <tr>
+                <th>Telephone Number:</th>
+                <td><input type="tel" name="telephone" required></td>
+            </tr>
+            <tr>
+                <th>Email:</th>
+                <td><input type="email" name="email" required></td>
+            </tr>
+        </table>
+
+        <h3>Product Details</h3>
+        <table>
+            <tr>
+                <th>Product Name</th>
+                <th>Product Number</th>
+                <th>Price (R)</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td>The EconoBox</td>
+                <td>1</td>
+                <td>5</td>
+                <td><input type="number" name="econo_quantity" min="0" value="0"></td>
+            </tr>
+            <tr>
+                <td>The standardBox</td>
+                <td>2</td>
+                <td>10</td>
+                <td><input type="number" name="standardbox_quantity" min="0" value="0"></td>
+            </tr>
+            <tr>
+                <td>The Premiumbox</td>
+                <td>3</td>
+                <td>15</td>
+                <td><input type="number" name="Premiumbox_quantity" min="0" value="0"></td>
+            </tr>
+            <tr>
+                <td>The Deluxebox</td>
+                <td>4</td>
+                <td>20</td>
+                <td><input type="number" name="Deluxebox_quantity" min="0" value="0"></td>
+            </tr>
+            <tr>
+                <td>The Superdeluxebox</td>
+                <td>5</td>
+                <td>30</td>
+                <td><input type="number" name="Superdeluxebox_quantity" min="0" value="0"></td>
+            </tr>
+            
+        </table>
+
+        <h3>Method of Payment</h3>
+        <table>
+            <tr>
+                <th>Credit Card Type:</th>
+                <td>
+                    <select name="card_type" required>
+                        <option value="visa">Visa</option>
+                        <option value="mastercard">MasterCard</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <th>Card Number:</th>
+                <td><input type="text" name="card_number" required></td>
+            </tr>
+            <tr>
+                <th>Expiry Date:</th>
+                <td><input type="text" name="expiry_date" placeholder="MM/YYYY" required></td>
+            </tr>
+        </table>
+
+        <h3>Billing & Delivery Address</h3>
+        <table>
+            <tr>
+                <th>Billing Address:</th>
+                <td><input type="text" name="billing_address" required></td>
+            </tr>
+            <tr>
+                <th>Delivery Address:</th>
+                <td><input type="text" name="delivery_address" required></td>
+            </tr>
+        </table>
+
+        <input type="submit" value="Submit Order">
+    </form>
+</body>
+</html>
